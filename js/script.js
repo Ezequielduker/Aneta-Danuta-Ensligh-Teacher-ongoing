@@ -36,5 +36,34 @@ function updateTimer() {
 }
 setInterval(updateTimer, 1000);
 updateTimer();
+// Profile Carousel
+const profileTrack = document.querySelector(".profile-carousel-track");
+const profilePrevBtn = document.querySelector(".profiles-section .carousel-btn.prev");
+const profileNextBtn = document.querySelector(".profiles-section .carousel-btn.next");
+
+let profileIndex = 0;
+const profileSlides = document.querySelectorAll(".profile-card");
+const totalProfiles = profileSlides.length;
+
+function updateProfileCarousel() {
+  const offset = -profileIndex * 100;
+  profileTrack.style.transform = `translateX(${offset}%)`;
+}
+
+profilePrevBtn.addEventListener("click", () => {
+  profileIndex = (profileIndex - 1 + totalProfiles) % totalProfiles;
+  updateProfileCarousel();
+});
+
+profileNextBtn.addEventListener("click", () => {
+  profileIndex = (profileIndex + 1) % totalProfiles;
+  updateProfileCarousel();
+});
+
+// Optional autoplay
+setInterval(() => {
+  profileIndex = (profileIndex + 1) % totalProfiles;
+  updateProfileCarousel();
+}, 8000);
 
 
