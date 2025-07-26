@@ -66,4 +66,3 @@ setInterval(() => {
   updateProfileCarousel();
 }, 8000);
 
-
