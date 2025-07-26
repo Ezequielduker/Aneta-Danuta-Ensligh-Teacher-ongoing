@@ -441,7 +441,183 @@ footer {
     padding: 0.4rem 0.8rem;
   }
 }
-/**nueva tarjeta**/
+.teacher-card-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  background: #fff;
+}
+
+.teacher-card {
+  background: linear-gradient(to bottom, #f3e8ff, #ffffff);
+  padding: 2rem;
+  border-radius: 25px;
+  max-width: 350px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+.teacher-card h3 {
+  color: #9333ea;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.teacher-card .level {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.teacher-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.teacher-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+.teacher-card ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+  padding-left: 1.2rem;
+  position: relative;
+}
+.teacher-card ul li::before {
+  content: '✔️';
+  position: absolute;
+  left: 0;
+  color: #9333ea;
+}
+
+.teacher-photo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 4px #9333ea;
+}
+.teacher-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.anny-carousel-section {
+  background: linear-gradient(to bottom, #fff0f6, #ffffff);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.anny-carousel-section h2 {
+  font-size: 2rem;
+  color: #7c3aed;
+  margin-bottom: 2rem;
+}
+
+.anny-carousel-container {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.anny-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.anny-profile-card {
+  min-width: 100%;
+  background: #f3e8ff;
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+}
+
+.anny-profile-card h3 {
+  color: #7c3aed;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.anny-profile-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto 1rem;
+  font-size: 0.95rem;
+}
+
+.anny-profile-card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.anny-profile-card .profile-quote {
+  font-style: italic;
+  color: #4b5563;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.anny-profile-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  margin-top: 1rem;
+}
+
+.anny-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  z-index: 10;
+}
+
+.anny-carousel-btn:hover {
+  background-color: #5b21b6;
+}
+
+.anny-carousel-btn.prev {
+  left: 10px;
+}
+
+.anny-carousel-btn.next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .anny-profile-card ul {
+    text-align: center;
+  }
+
+  .anny-profile-card img {
+    margin: 1rem auto 0;
+  }
+}
+
+
+/**nueva tarjeta
 .profiles-section {
   padding: 4rem 2rem;
   background: linear-gradient(to bottom, #fff0f6, #ffffff);
@@ -467,8 +643,19 @@ footer {
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.08);
   box-sizing: border-box;
-  text-align: left;
+  text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 1rem;
 }
 
 .profile-card h3 {
@@ -481,14 +668,19 @@ footer {
 .profile-card ul {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
+  text-align: left;
+  font-size: 0.95rem;
 }
 
 .profile-card ul li {
   margin-bottom: 0.6rem;
-  font-size: 0.95rem;
 }
-
+.profile-quote {
+  font-style: italic;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
 .profile-card img {
   width: 120px;
   height: 120px;
@@ -532,5 +724,6 @@ footer {
     min-width: 100%;
   }
 }
+
 
 
