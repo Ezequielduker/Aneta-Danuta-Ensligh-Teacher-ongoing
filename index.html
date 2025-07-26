@@ -144,9 +144,99 @@
     <button class="carousel-btn next">&#10095;</button>
   </div>
 </section>
+<section class="anny-carousel-section">
+  <h2>Meet Our Students</h2>
+  <div class="anny-carousel-container">
+    <button class="anny-carousel-btn prev" onclick="moveSlide(-1)">‹</button>
+    <div class="anny-carousel-track" id="annyCarouselTrack">
+      <!-- Card 1 -->
+      <div class="anny-profile-card">
+        <h3>Anny</h3>
+        <ul>
+          <li><strong>Level:</strong> C1</li>
+          <li><strong>Degree:</strong> Saratov State University, Linguistics</li>
+          <li>3+ years helping students improve their English</li>
+          <li>Private and group sessions available</li>
+        </ul>
+        <p class="profile-quote">I'll help you break your language barrier!</p>
+        <img src="img/IMG_1.JPG" alt="Anny photo">
+      </div>
+      <!-- Card 2 -->
+      <div class="anny-profile-card">
+        <h3>Emily</h3>
+        <ul>
+          <li><strong>Level:</strong> C2</li>
+          <li><strong>Degree:</strong> University of Oxford, English Philology</li>
+          <li>5+ years of international teaching experience</li>
+          <li>Interactive and conversation-based methods</li>
+        </ul>
+        <p class="profile-quote">Fluency starts with confidence!</p>
+        <img src="img/IMG_2.JPG" alt="Emily photo">
+      </div>
+      <!-- Card 3 -->
+      <div class="anny-profile-card">
+        <h3>Lucas</h3>
+        <ul>
+          <li><strong>Level:</strong> C2</li>
+          <li><strong>Degree:</strong> Harvard University, Applied Linguistics</li>
+          <li>Specialized in business and academic English</li>
+          <li>Flexible schedule and personalized plans</li>
+        </ul>
+        <p class="profile-quote">Let’s unlock your potential together.</p>
+        <img src="img/IMG_3.JPG" alt="Lucas photo">
+      </div>
+    </div>
+    <button class="anny-carousel-btn next" onclick="moveSlide(1)">›</button>
+  </div>
+</section>
+
+<!--<section class="teacher-card-section">
+  <div class="teacher-card">
+    <h3>Алина</h3>
+    <p class="level">Уровень знания языка: C1</p>
+    <p><strong>Образование:</strong> Саратовский государственный университет им. Н.Г. Чернышевского,<br> специальность: <em>“Фундаментальная и прикладная лингвистика”</em></p>
+    <ul>
+      <li>✅ В течение уже 3-х лет помогаю ученикам повысить их уровень английского языка</li>
+      <li>✅ Преподаю как индивидуальные, так и групповые занятия</li>
+      <li>✅ Разрушу твой языковой барьер</li>
+    </ul>
+    <div class="teacher-photo">
+      <img src="img/IMG_1.JPG" alt="Alina">
+    </div>
+  </div>
+</section>
+
 
 <!--termna aqui-->
-<!--nueva tarjeta como quiere anny-->
+<!--nueva tarjeta como quiere anny
+<section class="profiles-section" id="teachers">
+  <h2>Meet the Team</h2>
+  <div class="profile-carousel-container">
+    <button class="carousel-btn prev">&#10094;</button>
+    <div class="profile-carousel-track">
+
+      <div class="profile-card fade-in">
+        <div class="profile-image">
+          <img src="img/IMG_1.JPG" alt="Alina">
+        </div>
+        <h3>Алина</h3>
+        <ul>
+          <li>💬 Уровень знания языка: C1</li>
+          <li>🎓 Саратовский государственный университет</li>
+          <li>📚 3 года опыта преподавания</li>
+          <li>👥 Индивидуальные и групповые занятия</li>
+          <li>🚀 Помогу преодолеть языковой барьер</li>
+        </ul>
+        <p class="profile-quote">"Я сделаю английский доступным и понятным!"</p>
+      </div>
+
+      <!-- Puedes duplicar este bloque para más perfiles -->
+
+   <!-- </div>
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+</section>
+
 <section class="profiles-section" id="teachers">
   <h2>Meet the Team</h2>
   <div class="profile-carousel-container">
@@ -165,8 +255,8 @@
         <img src="img/IMG_1.JPG" alt="Alina">
       </div>
 
-      <!-- Puedes duplicar este bloque para más perfiles -->
-      <div class="profile-card fade-in">
+       Puedes duplicar este bloque para más perfiles -->
+      <!--<div class="profile-card fade-in">
         <h3>Juan</h3>
         <ul>
           <li>💬 Nivel: B2</li>
@@ -183,12 +273,8 @@
   </div>
 </section>
 
-<!--termina aca-->
 
- <!-- <section class="countdown">
-    <h2>Offer ends in:</h2>
-    <div id="timer" class="fade-in">00:00:00</div>
-  </section>-->
+termina aca-->
 
   <section class="signup" id="signup">
     <h2>Join the Program</h2>
@@ -202,6 +288,18 @@
   <footer>
     <p>© 2025 Aneta English Teacher. All rights reserved.</p>
   </footer>
+  <script>
+  let currentSlide = 0;
+  const track = document.getElementById("annyCarouselTrack");
+  const totalSlides = track.children.length;
+
+  function moveSlide(direction) {
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    const offset = -currentSlide * 100;
+    track.style.transform = `translateX(${offset}%)`;
+  }
+</script>
+
 
   <script src="js/script.js"></script>
 </body>
